@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script>
+        //change hello to red color 
+        document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector('#red').onclick = function (){
+                document.querySelector('#hello').style.color = 'red';
+            }
+
+        // change hello to blue color
+            document.querySelector('#blue').onclick = function(){
+                document.querySelector('#hello').style.color = 'blue';
+            }    
+
+        //change hello to green color
+            document.querySelector('#green').onclick = function(){
+                document.querySelector('#hello').style.color = 'green';
+            }
+
+        //change hello color to pink 
+            document.querySelector('.pink').onclick = function(){
+                document.querySelector('#hello').style.color = 'pink';
+            }
+        //change hello color to purple 
+            document.querySelector('.purple').onclick = function(){
+                document.querySelector('#hello').style.color = 'purple';
+            }
+        //change hello color to orange 
+            document.querySelector('.orange').onclick = function(){
+                document.querySelector('#hello').style.color = 'orange';
+            }
+
+        })
+        
+
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello!</h1>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="green">Green</button>
+    <button class="pink">Pink</button>
+    <button class="purple">Purple</button>
+    <button class="orange">Orange</button>
+</body>
+</html>
