@@ -1,3 +1,5 @@
+const { RestoreOutlined } = require("@material-ui/icons");
+
 const questions = [
     {
         question: 'What is your name?',
@@ -54,8 +56,30 @@ function load_question() {
 
     document.querySelectorAll('.option').forEach(option => {
         option.onclick = () => {
-            alert('clicked something');
+            //alert('clicked something');
+            if (option.textContent == questions[question_number].correct) {
+                correct++;
+            }
+            question_number++;
+            result();
+            if (question_number != questions.length) {
+                load_question();
+            }
+            else {
+                complete();
+            }
         }
-    })
+    });
 
+}
+
+function result() {
+    document.querySelector('#correct').innerHTML = `${correct} of ${question_number}`;
+}
+
+function complete() {
+    document.querySelector('#question').innerHTML = `Quiz complete`;
+    const options = document.querySelector('#options');
+    options.innerHTML = '';
+    document.querySelector('#correct').innerHTML = `${correct} of ${question_number}`;
 }
